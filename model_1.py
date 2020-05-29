@@ -42,6 +42,7 @@ def define_model_1():
 #load model definition
 model = define_model_1()
 model.summary()
+
 # fit model
 history = model.fit(trainX, trainY, epochs=5, batch_size=32, validation_data=(testX, testY), verbose=1)
 # evaluate model
