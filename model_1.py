@@ -45,8 +45,10 @@ model.summary()
 
 # fit model
 history = model.fit(trainX, trainY, epochs=5, batch_size=32, validation_data=(testX, testY), verbose=1)
+
 # evaluate model
 _, acc = model.evaluate(testX, testY, verbose=0)
+print("Accuracy : ")
 print('> %.3f' % (acc * 100.0))
 
 str_final_acc = str(acc*100)
