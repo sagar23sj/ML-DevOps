@@ -1,4 +1,3 @@
-
 # baseline cnn model for mnist
 from keras.datasets import mnist
 from keras.utils import to_categorical
@@ -40,7 +39,9 @@ def define_model_1():
 	model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 	return model
 
+#load model definition
 model = define_model_1()
+model.summary()
 # fit model
 history = model.fit(trainX, trainY, epochs=5, batch_size=32, validation_data=(testX, testY), verbose=1)
 # evaluate model
